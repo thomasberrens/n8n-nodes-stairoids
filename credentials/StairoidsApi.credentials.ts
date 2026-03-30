@@ -12,6 +12,7 @@ export class StairoidsApi implements ICredentialType {
 	documentationUrl = 'https://docs.stairoids.com/integrations/n8n';
 	extends = ['oAuth2Api'];
 
+
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API URL',
