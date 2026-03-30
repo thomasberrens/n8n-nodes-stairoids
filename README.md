@@ -1,6 +1,6 @@
 # n8n-nodes-stairoids
 
-This is an n8n community node package that integrates with the [Stairoids](https://stairoids.nl) lead generation platform.
+This is an n8n community node package that integrates with the [Stairoids](https://stairoids.com) platform.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
 
