@@ -1,4 +1,5 @@
 import {
+	ICredentialTestRequest,
 	ICredentialType,
 	INodeProperties,
 } from 'n8n-workflow';
@@ -12,6 +13,12 @@ export class StairoidsApi implements ICredentialType {
 	documentationUrl = 'https://docs.stairoids.com/integrations/n8n';
 	extends = ['oAuth2Api'];
 
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: '={{$credentials.apiUrl}}',
+			url: '/oauth/me',
+		},
+	};
 
 	properties: INodeProperties[] = [
 		{
