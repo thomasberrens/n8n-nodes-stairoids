@@ -81,8 +81,7 @@ This node uses OAuth2 (PKCE) authentication with the Stairoids API.
 ### Setup Steps
 
 1. In n8n, create new **Stairoids API** credentials
-2. Set the **API URL** (default: `http://localhost:8080/api`, production: `https://app.stairoids.com/api`)
-3. Complete the OAuth2 authorization flow
+2Complete the OAuth2 authorization flow
 
 ## API Endpoints
 
