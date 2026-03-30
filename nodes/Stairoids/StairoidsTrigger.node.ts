@@ -86,7 +86,7 @@ export class StairoidsTrigger implements INodeType {
 				if (webhookData.webhookId !== undefined) {
 					try {
 						// Verify the webhook still exists in Stairoids
-						const response = await this.helpers.requestOAuth2.call(
+						const response = await this.helpers.httpRequestWithAuthentication.call(
 							this,
 							'stairoidsApi',
 							{
@@ -121,7 +121,7 @@ export class StairoidsTrigger implements INodeType {
 				};
 
 				try {
-					const response = await this.helpers.requestOAuth2.call(
+					const response = await this.helpers.httpRequestWithAuthentication.call(
 						this,
 						'stairoidsApi',
 						{
@@ -150,7 +150,7 @@ export class StairoidsTrigger implements INodeType {
 
 				if (webhookData.webhookId !== undefined) {
 					try {
-						await this.helpers.requestOAuth2.call(
+						await this.helpers.httpRequestWithAuthentication.call(
 							this,
 							'stairoidsApi',
 							{
@@ -159,9 +159,8 @@ export class StairoidsTrigger implements INodeType {
 								json: true,
 							},
 						);
-					} catch (error) {
+					} catch {
 						// Ignore errors on deletion - webhook may already be gone
-						console.warn('Failed to delete Stairoids webhook:', error);
 					}
 
 					delete webhookData.webhookId;

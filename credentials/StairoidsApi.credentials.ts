@@ -3,7 +3,7 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-const DEFAULT_URL = 'https://app.stairoids.com/api';
+const DEFAULT_URL = 'http://localhost:8080/api';
 const CLIENT_ID = 'stairoids-integration';
 
 export class StairoidsApi implements ICredentialType {

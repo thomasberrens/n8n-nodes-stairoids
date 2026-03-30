@@ -98,7 +98,7 @@ export class Stairoids implements INodeType {
 					body.score = additionalFields.score;
 				}
 
-				const responseData = await this.helpers.requestOAuth2.call(
+				const responseData = await this.helpers.httpRequestWithAuthentication.call(
 					this,
 					'stairoidsApi',
 					{
