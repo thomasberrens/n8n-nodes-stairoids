@@ -11,15 +11,15 @@ import { getBaseUrl } from '../../credentials/StairoidsApi.credentials';
 
 export class Stairoids implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Stairoids',
+		displayName: 'Stairoids Add Activity',
 		name: 'stairoids',
 		icon: 'file:stairoids-icon.png',
 		group: ['transform'],
 		version: 1,
-		subtitle: 'Add Activity',
-		description: 'Interact with Stairoids lead generation platform',
+		subtitle: 'Add Activity to a Lead',
+		description: 'Add an activity to an existing lead in Stairoids',
 		defaults: {
-			name: 'Stairoids',
+			name: 'Stairoids Add Activity',
 		},
 		inputs: ['main'],
 		outputs: ['main'],
