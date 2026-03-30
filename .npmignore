@@ -1,0 +1,34 @@
+# Source files
+nodes/
+credentials/
+
+# Config files
+tsconfig.json
+gulpfile.js
+.eslintrc.js
+.prettierrc
+
+# Development files
+*.ts
+!*.d.ts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies (will be installed by user)
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# Build artifacts that shouldn't be included
+*.log
+*.map

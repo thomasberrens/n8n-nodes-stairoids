@@ -1,0 +1,52 @@
+{
+  "name": "n8n-nodes-stairoids",
+  "version": "0.1.3",
+  "description": "n8n community node for Stairoids platform integration",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "stairoids"
+  ],
+  "license": "MIT",
+  "homepage": "https://stairoids.com",
+  "author": {
+    "name": "Stairoids",
+    "email": "sam@stairoids.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stairoids/n8n-nodes-stairoids.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials --ext .ts --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/StairoidsApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Stairoids/Stairoids.node.js",
+      "dist/nodes/Stairoids/StairoidsTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "gulp": "^4.0.2",
+    "n8n-workflow": "^1.20.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
